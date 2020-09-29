@@ -77,7 +77,7 @@ fi
 
 #allow domain users login xrdp
 #sed -i 's/access_provider = ad/access_provider = simple/' /etc/sssd/sssd.conf
-grep -qxF "access_provider = ad" /etc/sssd/sssd.conf
+grep -qxF "access_provider = simple" /etc/sssd/sssd.conf
 if [ $? -ne 0 ]; then
   sed -i 's/access_provider = ad/access_provider = simple/' /etc/sssd/sssd.conf
 else
